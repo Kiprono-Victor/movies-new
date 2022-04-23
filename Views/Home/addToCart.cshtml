@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "addToCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+
+        <div class="card addcart container-fluid ">
+            <table>
+                <tr>
+                    <th>Movie Id</th>
+                    <th>Price</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>50</td>
+                    <td><a class="btn btn-default  btn-sm  ml-3 search2 ">View&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>50</td>
+                    <td>
+                        <span style="color:green!important">Pay via Mpesa</span>
+
+                        <a data-toggle="modal" data-target="#myModal" class="     search2 ">Click Here</</a>
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="modal fade " id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content border1  ">
+
+            <!-- Modal Header -->
+            <div class="modal-header modal2 border-0 border2 ">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <img src="~/Images/123.jpg" class="mpesa" />
+                </div>
+                <div class="col-lg-1"></div>
+            
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body modal1 border-0 ">
+                
+                <table >
+                    <tr>
+                        <td>
+                            <input placeholder="Enter Phone Number " class="form-control custome_input m-3" /><br />
+                            <input placeholder="Enter Amount " class="form-control custome_input m-3" />
+                        </td>
+                        <td>
+
+                        </td>
+
+                        <td class="mr-5">
+                            <a asp-action="login" asp-controller="home" class="btn  btn-sm btn-outline-warning p-0 search2  " style="height:20px;"><i class="fa fa-share-square-o" aria-hidden="true"></i>&nbsp;Click For Payment</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer modal1 border-0 footer_footer">
+                <button type="button" style="color:red" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

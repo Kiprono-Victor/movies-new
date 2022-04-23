@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "MoviewDashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-lg-12 p-2">
+            <div class="card b_whit text-white border-0 card1 ">
+                <table>
+                    <tr>
+                        <td class="color_text2 ">
+                            <div class="circle card1"><i class="fa fa-users" aria-hidden="true"></i></div>
+                        </td>
+                        <td class="text2" ><small>Welcome Victor <br />Movie order<br /><button type="submit" class=" btn-sm search3 ">Logout&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></button></small></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4 ">
+
+        <div class="col-lg-4 p-2">
+            <div class="card color1 border-0 card1 ">
+                <div class="card-body text-center   ">
+                    <table>
+                        <tr>
+
+                            <td class="text1_card  "><small><img src="~/Images/fast-delivery (5).png" class="card2 " />&nbsp;Pending Orders<br />@ViewBag.vic 10</small></td>
+                        </tr>
+
+                        <tr>
+                            <td><button type="submit" class="search3 btn-sm   ">View&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></button></td>
+
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 p-2">
+            <div class="card back_color border-0 card1 ">
+                <div class="card-body text-center   ">
+                    <table>
+                        <tr>
+
+                            <td class=" text1_card "><small><img src="~/Images/car.png" class="card2" />&nbsp;Delivered Orders<br />@ViewBag.vic 10</small></td>
+                        </tr>
+
+                        <tr>
+                            <td><button type="submit" class="search3 btn-sm    ">View&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></button></td>
+
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 p-2">
+            <div  class="card bg_warning border-0 card1">
+                <div class="card-body text-center  ">
+                    <table>
+                        <tr>
+
+                            <td class=" text1_card "><small><img src="~/Images/group.png" class="card2 " />&nbsp;System Users<br />@ViewBag.users</small></td>
+                        </tr>
+
+                        <tr>
+                            <td><a  asp-action="Index" asp-controller="Registers" class=" btn-sm   search3 ">View&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a></td>
+
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div />
+    </div>
+</div>

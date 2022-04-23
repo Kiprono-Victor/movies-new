@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MOVIEW.Models.Register>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    <h3 style="text-align:center" class="heading_color"><b>System users</b></h3>
+</p>
+<table class="table heading_color">
+    <thead class="thead">
+        <tr>
+            <th class="thead">
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th class="thead">
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th class="thead">
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th class="thead">
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="thead2">
+@foreach (var item in Model) {
+        <tr class="textt2" >
+            <td class="thead2">
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td class="thead2">
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td class="thead2">
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td class="thead2">
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td class="thead2">
+                <a asp-action="Edit" asp-route-id="@item.id" style="color:green;">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id" style="color:green";>Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id"><i class="fa fa-trash delete" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ 
